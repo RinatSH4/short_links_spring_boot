@@ -52,4 +52,9 @@ public class MainController {
         ShortLinks link = linkRepository.findByShortLink(shortLink);
         return "redirect:" + link.getLink();
     }
+
+    @GetMapping("/chat")
+    public String chat() {
+        return "/chat";
+    }
 }
